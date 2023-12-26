@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" baseProfile="tiny" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 512 512" overflow="visible" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<path fill="#B3CCFF" d="M512,249.3H256l-10.7,109.4L256,471.3h256V249.3z"/>
+			<path fill="#CCE6FF" d="M0,249.3h256v222H0V249.3z"/>
+		</g>
+		<g>
+			<path fill="#29376D" d="M437.3,377.3H256l-10.7,13.4l10.7,16.6h181.3L437.3,377.3z"/>
+			<path fill="#47568C" d="M74.7,377.3H256v30H74.7L74.7,377.3z"/>
+		</g>
+		<path fill="#FF4D4D" d="M74.7,313.3h31.7v30H74.7V313.3z"/>
+		<path fill="#F9F9F9" d="M136.3,313.3h77v30h-77V313.3z"/>
+	</g>
+	<g>
+		<path fill="#FDAE02" d="M512,108l-64-9.3l-28.6-58l-28.6,58l-53.1,7.7l-53.1-7.7l-28.6-58L245.3,124l10.7,62.8l57.3,30.1
+			l-10.9-63.8l35.4-34.5l35.4,34.5l-10.9,63.8l57.3-30.1l57.3,30.1l-10.9-63.8L512,108z"/>
+		<path fill="#FDCB02" d="M227.4,98.7l-53.1,7.7l-53.1-7.7l-28.6-58L64,98.7L0,108l46.3,45.1l-10.9,63.8l57.3-30.1l57.3,30.1
+			L139,153.1l35.4-34.5l35.4,34.5l-10.9,63.8l57.3-30.1V40.7L227.4,98.7z"/>
+	</g>
+</g>
+</svg>

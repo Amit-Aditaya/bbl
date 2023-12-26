@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>314577921533-lcolb04m3mljc62hgqv7evaepl70imrc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.314577921533-lcolb04m3mljc62hgqv7evaepl70imrc</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>314577921533-32evov6k2dh5bujnletr8l28rpjf190j.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBGodcngN-m62H7yNQ8QLDVDvZ1-c51VI0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>314577921533</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.babuland.babuland</string>
+	<key>PROJECT_ID</key>
+	<string>babuland-8e3ec</string>
+	<key>STORAGE_BUCKET</key>
+	<string>babuland-8e3ec.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:314577921533:ios:ffc0a47ad517f99a956594</string>
+	<key>DATABASE_URL</key>
+	<string>https://babuland-8e3ec.firebaseio.com</string>
+</dict>
+</plist>

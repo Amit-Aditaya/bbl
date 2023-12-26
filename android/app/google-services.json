@@ -1,0 +1,131 @@
+{
+  "project_info": {
+    "project_number": "314577921533",
+    "firebase_url": "https://babuland-8e3ec.firebaseio.com",
+    "project_id": "babuland-8e3ec",
+    "storage_bucket": "babuland-8e3ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314577921533:android:2f118a4bfa12f434956594",
+        "android_client_info": {
+          "package_name": "com.babuland.babuland"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314577921533-32evov6k2dh5bujnletr8l28rpjf190j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.babuland.babuland",
+            "certificate_hash": "afb3cb1cc73786a390800d52ea81089ac5189ccf"
+          }
+        },
+        {
+          "client_id": "314577921533-39irnn58deor8e78jqi6e5mf3c6bl0lo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.babuland.babuland",
+            "certificate_hash": "985f1ad91d0ad41a53e1ea6a263b9ac09f83f4d4"
+          }
+        },
+        {
+          "client_id": "314577921533-d3vhcu745cj1nj30sc8odbuh58kt8m3p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.babuland.babuland",
+            "certificate_hash": "e6920861c618f3797e7091dbae3b15ae0f825789"
+          }
+        },
+        {
+          "client_id": "314577921533-dvnas6pltf3ugqmj9tssgebt6gl9k4gq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.babuland.babuland",
+            "certificate_hash": "85d4f74405032614c46ba22dc9af626de5fb6040"
+          }
+        },
+        {
+          "client_id": "314577921533-k67muihmob9sfs1uu7t2idoi7fq6cnd4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.babuland.babuland",
+            "certificate_hash": "b9b7fd7466a99f91029bf52f8fb3b760e2d88503"
+          }
+        },
+        {
+          "client_id": "314577921533-t953eusqlggphplgru4mvcrk8akt0afs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.babuland.babuland",
+            "certificate_hash": "0c9723f10fab8b85f99e366d935f5720d36e2b22"
+          }
+        },
+        {
+          "client_id": "314577921533-jtlft7cp4pufrs2t870tulfjlhp6oc15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB92utVQDlVrBx-WTto4l-cVIYIDSROHjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314577921533-jtlft7cp4pufrs2t870tulfjlhp6oc15.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "314577921533-lcolb04m3mljc62hgqv7evaepl70imrc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.babuland.babuland"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314577921533:android:1ea6c469170ae054956594",
+        "android_client_info": {
+          "package_name": "com.babuland.babulandhost"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314577921533-jtlft7cp4pufrs2t870tulfjlhp6oc15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB92utVQDlVrBx-WTto4l-cVIYIDSROHjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314577921533-jtlft7cp4pufrs2t870tulfjlhp6oc15.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "314577921533-lcolb04m3mljc62hgqv7evaepl70imrc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.babuland.babuland"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
