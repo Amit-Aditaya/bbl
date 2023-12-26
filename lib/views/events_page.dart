@@ -8,8 +8,22 @@ import 'package:flutter_babuland_app/views/past_events_page.dart';
 import 'package:flutter_babuland_app/views/upcoming_events_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class EventsPage extends StatelessWidget {
+class EventsPage extends StatefulWidget {
   const EventsPage({Key? key}) : super(key: key);
+
+  @override
+  State<EventsPage> createState() => _EventsPageState();
+}
+
+class _EventsPageState extends State<EventsPage> {
+  late TextStyle _errorTextStyle;
+
+  @override
+  void initState() {
+    _errorTextStyle = TextStyle(
+        fontSize: 16, fontWeight: FontWeight.w600, color: AppColors.textGrey);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +55,7 @@ class EventsPage extends StatelessWidget {
             bottom: TabBar(
               indicatorColor: AppColors.primaryColor,
               indicatorWeight: 6,
-              unselectedLabelColor: const Color(0xffCFD1CE),
+              unselectedLabelColor: AppColors.primaryBlue,
               labelColor: AppColors.primaryColor,
               tabs: const [
                 Tab(
@@ -63,12 +77,18 @@ class EventsPage extends StatelessWidget {
                     return UpcomingEvents(
                       upcomingEventModel: state.upcomingEventModel,
                     );
-                  } else {
+                  } else if (state is UpcomingEventLoadingState) {
                     return Center(
                       child: CircularProgressIndicator(
                         color: AppColors.primaryColor,
                       ),
                     );
+                  } else {
+                    return Center(
+                        child: Text(
+                      'An error Occured', //error handling
+                      style: _errorTextStyle,
+                    ));
                   }
                 },
               ),
@@ -76,11 +96,16 @@ class EventsPage extends StatelessWidget {
                 builder: (context, state) {
                   if (state is PastEventLoadedState) {
                     return PastEvents(pastEventModel: state.pastEventModel);
-                  } else {
+                  } else if (state is PastEventLoadedState) {
                     return Center(
                       child: CircularProgressIndicator(
                         color: AppColors.primaryColor,
                       ),
+                    );
+                  } else {
+                    return Text(
+                      'An error occured', //error handling
+                      style: _errorTextStyle,
                     );
                   }
                 },

@@ -7,13 +7,14 @@ import 'package:flutter_babuland_app/data/repository/free_ticket_repository.dart
 import 'package:flutter_babuland_app/theme_helpers/colors.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 
 class FreeTicketsPage extends StatelessWidget {
   //const FreeTicketsPage({Key? key}) : super(key: key);
   static Set<TicketItemContainer> selectedFreeTicketItemList = {};
 
   static String? selectedTicketExpireDate;
+
+  const FreeTicketsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class FreeTicketsPage extends StatelessWidget {
             ..add(LoadFreeTicketApiEvent()),
       child: Scaffold(
         appBar: CustomAppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.white, // reuse of components
           title: 'Free Tickets',
         ),
         backgroundColor: Colors.white,
@@ -39,12 +40,16 @@ class FreeTicketsPage extends StatelessWidget {
                       ),
                     );
                   });
-            } else {
+            } else if ((state is FreeTicketLoadingState)) {
               return Center(
                 child: SpinKitFadingGrid(
                   size: 35,
                   color: AppColors.primaryColor,
                 ),
+              );
+            } else {
+              return const Center(
+                child: Text('An error has occured'),
               );
             }
           },

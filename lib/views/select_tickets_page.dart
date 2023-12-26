@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_babuland_app/bloc/ticket_items/ticket_items_bloc.dart';
-import 'package:flutter_babuland_app/custom_classes/hive_box_utils.dart';
 import 'package:flutter_babuland_app/custom_classes/ticket_invoice_page_arguments.dart';
 import 'package:flutter_babuland_app/custom_widgets/app_button.dart';
 import 'package:flutter_babuland_app/custom_widgets/custom_app_bar.dart';
@@ -9,12 +8,12 @@ import 'package:flutter_babuland_app/data/repository/ticket_item_repository.dart
 import 'package:flutter_babuland_app/theme_helpers/colors.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 
 class SelectTicketsPage extends StatelessWidget {
   static Set<TicketItemContainer> ticketItemList = {};
-
   static Set<TicketItemContainer> filteredTicketItemList = {};
+
+  const SelectTicketsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

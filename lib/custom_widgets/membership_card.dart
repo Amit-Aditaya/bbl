@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_babuland_app/custom_widgets/membership_offer_stamp.dart';
 import 'package:flutter_babuland_app/theme_helpers/colors.dart';
 
-class MembershipCard extends StatelessWidget {
+class MembershipCard extends StatefulWidget {
   final int id;
   final String packageName;
   final String packageTitle;
@@ -13,18 +13,33 @@ class MembershipCard extends StatelessWidget {
   final String packageDescription;
   final String packageType;
 
-  const MembershipCard({
-    Key? key,
-    required this.id,
-    required this.packageName,
-    required this.packageTitle,
-    required this.discountPrice,
-    required this.regularPrice,
-    required this.duration,
-    required this.packageValue,
-    required this.packageDescription,
-    required this.packageType, ikj
-  }) : super(key: key);
+  const MembershipCard(
+      {Key? key,
+      required this.id,
+      required this.packageName,
+      required this.packageTitle,
+      required this.discountPrice,
+      required this.regularPrice,
+      required this.duration,
+      required this.packageValue,
+      required this.packageDescription,
+      required this.packageType,
+      ikj})
+      : super(key: key);
+
+  @override
+  State<MembershipCard> createState() => _MembershipCardState();
+}
+
+class _MembershipCardState extends State<MembershipCard> {
+  late TextStyle _textStyle;
+
+  @override
+  void initState() {
+    _textStyle = TextStyle(
+        color: AppColors.textGrey2, fontSize: 16, fontWeight: FontWeight.w500);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +52,9 @@ class MembershipCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
           width: 2,
-          color: duration == 30
+          color: widget.duration == 30
               ? const Color(0xffd8f092)
-              : duration == 90
+              : widget.duration == 90
                   ? const Color(0xff97eef7)
                   : const Color(0xffb8a1ff),
         ),
@@ -58,15 +73,15 @@ class MembershipCard extends StatelessWidget {
                   borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(13),
                       topRight: Radius.circular(13)),
-                  color: duration == 30
+                  color: widget.duration == 30
                       ? const Color(0xffd8f092)
-                      : duration == 90
+                      : widget.duration == 90
                           ? const Color(0xff97eef7)
                           : const Color(0xffb8a1ff),
                 ),
                 child: Center(
                   child: Text(
-                    packageTitle,
+                    widget.packageTitle,
                     style: const TextStyle(
                         color: Colors.white,
                         fontSize: 20,
@@ -76,47 +91,41 @@ class MembershipCard extends StatelessWidget {
               ),
               const Spacer(),
               Text(
-                'Duration: $packageName',
+                'Duration: ${widget.packageName}',
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: AppColors.textGrey2,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500),
+                style: _textStyle, // DRY implementation
               ),
               const Spacer(),
-              regularPrice == discountPrice
+              widget.regularPrice == widget.discountPrice
                   ? const SizedBox(height: 0)
                   : Text(
-                      'Regular Price: $regularPrice',
+                      'Regular Price: ${widget.regularPrice}',
                       style: TextStyle(
                         color: Colors.red.withOpacity(.75),
                         decoration: TextDecoration.lineThrough,
                       ),
                     ),
               Text(
-                'Price: ৳$discountPrice',
-                style:
-                    const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                'Price: ৳${widget.discountPrice}',
+                style: _textStyle.copyWith(
+                    fontWeight: FontWeight.bold), // DRY implementation
               ),
               const Spacer(),
               Text(
-                'Unlimited time and visit for $duration days',
-                style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
-                    color: AppColors.textGrey2),
+                'Unlimited time and visit for ${widget.duration} days',
+                style: _textStyle, // DRY implementation
               ),
               const Spacer(),
             ],
           ),
-          regularPrice - discountPrice != 0
+          widget.regularPrice - widget.discountPrice != 0
               ? Positioned(
                   top: -10,
                   right: 5,
-                  child: id == 361
+                  child: widget.id == 361
                       ? MembershipOfferStamp(
                           text:
-                              '${(((regularPrice - discountPrice) / regularPrice) * 100).toStringAsFixed(0)}% OFF',
+                              '${(((widget.regularPrice - widget.discountPrice) / widget.regularPrice) * 100).toStringAsFixed(0)}% OFF',
                           color: Colors.red)
                       : const Text(''),
                 )

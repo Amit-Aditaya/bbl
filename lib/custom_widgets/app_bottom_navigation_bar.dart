@@ -51,12 +51,8 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
           backgroundColor: Colors.white,
           selectedItemColor: AppColors.primaryColor,
           onTap: (index) {
-            // widget.pageController.jumpToPage(
-            //   index,
-            // );
             if (index == 1) {
               Navigator.pushNamed(context, 'scanCouponPage');
-              //   Navigator.pushNamed(context, 'quizPage');
             } else if (index == 2) {
               Navigator.pushNamed(context, 'profilePage');
             } else if (index == 3) {
